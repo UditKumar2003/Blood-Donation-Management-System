@@ -1,0 +1,181 @@
+.banks-page {
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+  color: #292323;
+  text-align: left;
+}
+
+.banks-page h1,
+.banks-page h2 {
+  color: #8f0000;
+}
+
+.banks-intro {
+  margin-bottom: 20px;
+  color: #554949;
+}
+
+.banks-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.banks-search label {
+  font-weight: 700;
+}
+
+.banks-search input,
+.bank-review-form select,
+.bank-review-form textarea {
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #917a7a;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.banks-search input {
+  flex: 1;
+  min-width: 180px;
+}
+
+.banks-search button,
+.bank-review-form button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  background: #a00000;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.banks-search .banks-clear {
+  color: #8f0000;
+  background: #f7e5e5;
+}
+
+.banks-notice {
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.banks-notice.error {
+  color: #8f0000;
+  background: #ffe7e7;
+}
+
+.banks-notice.success {
+  color: #14532d;
+  background: #e7f8ed;
+}
+
+.banks-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.bank-card {
+  padding: 22px;
+  border: 1px solid #dfc5c5;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(90, 0, 0, 0.06);
+}
+
+.bank-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bank-heading h2 {
+  margin-bottom: 8px;
+}
+
+.bank-heading a,
+.banks-page a {
+  color: #8f0000;
+}
+
+.bank-rating {
+  white-space: nowrap;
+  font-weight: 700;
+  color: #8f5200;
+}
+
+.bank-card h3 {
+  margin: 20px 0 8px;
+  color: #423333;
+}
+
+.bank-prices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.bank-prices li {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #fff0f0;
+}
+
+.price-disclaimer {
+  margin-top: 8px;
+  color: #675a5a;
+  font-size: 13px;
+}
+
+.bank-review {
+  margin: 10px 0;
+  padding: 12px;
+  border-left: 3px solid #b30000;
+  background: #fff8f8;
+}
+
+.bank-review p {
+  margin-top: 6px;
+}
+
+.bank-review-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.bank-review-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.bank-review-form textarea {
+  resize: vertical;
+}
+
+.bank-review-form button {
+  justify-self: start;
+}
+
+@media (max-width: 600px) {
+  .bank-heading {
+    flex-direction: column;
+  }
+
+  .bank-rating {
+    white-space: normal;
+  }
+}

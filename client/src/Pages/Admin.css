@@ -1,0 +1,180 @@
+.admin-page {
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+  color: #292323;
+  text-align: left;
+}
+
+.admin-page h1,
+.admin-page h2 {
+  color: #8f0000;
+}
+
+.admin-intro,
+.admin-section > p {
+  color: #554949;
+}
+
+.admin-message {
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+}
+
+.admin-message.error {
+  color: #8f0000;
+  background: #ffe7e7;
+}
+
+.admin-message.success {
+  color: #14532d;
+  background: #e7f8ed;
+}
+
+.admin-section {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid #e3caca;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.admin-request-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-request {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e3caca;
+  border-radius: 8px;
+}
+
+.admin-request h3 {
+  margin: 0 0 8px;
+  color: #8f0000;
+}
+
+.admin-request p {
+  margin: 4px 0;
+}
+
+.admin-request label,
+.admin-bank-form > label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.admin-page input,
+.admin-page select {
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #917a7a;
+  border-radius: 6px;
+  color: #282020;
+  background: #fff;
+  font: inherit;
+}
+
+.admin-bank-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.admin-prices {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  border: 1px solid #e3caca;
+  border-radius: 8px;
+}
+
+.admin-prices label {
+  display: grid;
+  gap: 6px;
+}
+
+.admin-bank-form button {
+  justify-self: start;
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 7px;
+  color: #fff;
+  background: #a00000;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-bank-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.admin-bank-item,
+.admin-bank-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-bank-item {
+  padding: 12px;
+  border: 1px solid #e3caca;
+  border-radius: 8px;
+}
+
+.admin-bank-item p {
+  margin-top: 4px;
+}
+
+.admin-bank-actions button,
+.admin-bank-form .admin-cancel {
+  padding: 9px 14px;
+  border: 1px solid #a00000;
+  border-radius: 6px;
+  color: #a00000;
+  background: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-bank-actions .delete {
+  border-color: #7f0000;
+  color: #7f0000;
+}
+
+.admin-bank-form .admin-cancel {
+  justify-self: start;
+}
+
+@media (max-width: 650px) {
+  .admin-request {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-bank-form {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-prices {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

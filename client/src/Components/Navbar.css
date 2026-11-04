@@ -1,0 +1,131 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #b30000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar-logo span {
+  color: #222;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  font-size: 14px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #b30000;
+}
+
+.nav-links .active-link {
+  color: #b30000;
+  border-bottom: 2px solid #b30000;
+}
+
+.nav-register-btn {
+  background: #b30000;
+  color: #fff !important;
+  padding: 9px 20px;
+  border-radius: 8px;
+  border-bottom: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-auth-btn {
+  border: 0;
+  background: #b30000;
+  color: #fff;
+  border-radius: 8px;
+  padding: 9px 20px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(179, 0, 0, 0.3);
+  color: #fff !important;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #b30000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.active {
+    max-height: 300px;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+    border-top: 1px solid #f0e0e0;
+  }
+
+  .nav-register-btn {
+    display: inline-block;
+    margin: 10px auto;
+  }
+}
